@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">ShadowPreviewer</string>
+    <string name="default_preview_text">"Text"</string>
+    <string name="settings_tab_text_dx">"Dx"</string>
+    <string name="settings_tab_text_dy">"Dy"</string>
+    <string name="settings_tab_text_radius">"Radius"</string>
+    <string name="settings_tab_text_text_color">"Text color"</string>
+    <string name="settings_tab_text_shadow_color">"Shadow color"</string>
+    <string name="settings_tab_text_about">"About"</string>
+
+    <!-- Input text -->
+    <string name="btn_input_text">"Change text"</string>
+    <string name="dialog_title_input_text">"Input text"</string>
+
+    <string name="text_icon_plus">"+"</string>
+    <string name="text_icon_subtract">"-"</string>
+
+    <string name="color_R" translatable="false">"R"</string>
+    <string name="color_G" translatable="false">"G"</string>
+    <string name="color_B" translatable="false">"B"</string>
+</resources>

@@ -1,0 +1,15 @@
+<resources>
+    <dimen name="preview_area_height">280dp</dimen>
+    <dimen name="preview_text_default_text_size">60dp</dimen>
+
+    <!-- Tab -->
+    <dimen name="settings_tab_area_width">72dp</dimen>
+    <dimen name="settings_tab_height">48dp</dimen>
+    <dimen name="settings_tab_margin">2dp</dimen>
+
+
+    <!-- Default parameters -->
+    <dimen name="default_dx">1</dimen>
+    <dimen name="default_dy">1</dimen>
+    <dimen name="default_radius">3</dimen>
+</resources>
