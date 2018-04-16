@@ -4,6 +4,6 @@ This application is designed for UI designer. You can use this tool to preview t
 
 You can download this appliation from [Google Play]( https://play.google.com/store/apps/details?id=com.inscode.shadowpreviewer).
 
-### Screenshots
+## Screenshots
 
-![device-2018-01-24-235959](./documents/imgs/device-2018-01-24-235959.png)
+![device-2018-01-24-235959](./documents/imgs/app_preview.png)

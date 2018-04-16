@@ -3,6 +3,7 @@ package com.inscode.shadowpreviewer;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.InputType;
@@ -18,7 +19,9 @@ import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
 import com.inscode.shadowpreviewer.ui.TabContainer;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements FontSelectDialogFragment.Callback {
+
+    public static final String TAG = "Shadowler";
 
     private static final int DEFAULT_SEEK_BAR_MAX_DX = 255;
     private static final int DEFAULT_SEEK_BAR_MAX_DY = 255;
@@ -38,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView mPreviewTextView;
     private Button mBtnInputText;
+    private Button mBtnChangeFont;
 
     private SeekBar mValueSeekBar;
     private TextView mValueText;
@@ -139,6 +143,7 @@ public class MainActivity extends AppCompatActivity {
     private void findViews() {
         mTabContainer = findViewById(R.id.tabs);
         mBtnInputText = findViewById(R.id.btn_input_text);
+        mBtnChangeFont = findViewById(R.id.btn_change_font);
         mValueSettingPanel = findViewById(R.id.settings_single_value_area);
         mColorSettingPanel = findViewById(R.id.settings_color_area);
         mPreviewTextView = findViewById(R.id.preview_text);
@@ -309,6 +314,14 @@ public class MainActivity extends AppCompatActivity {
                 builder.create().show();
             }
         });
+
+        mBtnChangeFont.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FontSelectDialogFragment.newInstance().show(getFragmentManager(),
+                        FontSelectDialogFragment.TAG);
+            }
+        });
     }
 
     private void switchToValueSettingPanel() {
@@ -356,4 +369,10 @@ public class MainActivity extends AppCompatActivity {
         mColorBlueValueText.setText(String.valueOf(mShadowColorBlue));
     }
 
+    @Override
+    public void onSelectNewFont(Typeface typeface) {
+        if (null != mPreviewTextView && null != typeface) {
+            mPreviewTextView.setTypeface(typeface);
+        }
+    }
 }
